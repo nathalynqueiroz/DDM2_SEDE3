@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Eventos JavaScript - Exercício 4</title>
+    <style>
+        /* destacar o elemento */
+        .destacado {
+            border: 2px solid red;
+        }
+    </style>
+    <script>
+        //  mudar a cor 
+        function mudarCor(elemento) {
+            elemento.style.backgroundColor = "red";
+        }
+
+        //  destacar o elemento quando recebe foco
+        function destacar(elemento) {
+            elemento.classList.add("destacado");
+        }
+
+        // exibir mensagem quando o valor é alterado
+        function exibirMensagem() {
+            alert("O valor foi alterado!");
+        }
+    </script>
+</head>
+	<body>
+
+		<!-- onmouseover -->
+		<div onmouseover="mudarCor(this)" style="width: 200px; height: 100px; background-color: #ffb6c1;">
+			Passe o mouse aqui para mudar a cor!
+		</div>
+
+		<br>
+
+		<!-- onfocus -->
+		<input type="text" onfocus="destacar(this)" placeholder="Passe o mouse aqui para destacar">
+
+		<br>
+
+		<!-- onchange -->
+		<select onchange="exibirMensagem()">
+			<option value="opcao1">Opção 1</option>
+			<option value="opcao2">Opção 2</option>
+			<option value="opcao3">Opção 3</option>
+		</select>
+	</body>
+</html>

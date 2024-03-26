@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques - Exercício 6</title>
+</head>
+<body>
+    <button id="botao">Clique Aqui</button>
+    <p id="contador">Número de Cliques: 0</p>
+
+    <script src="script.js"></script>
+</body>
+
+<script>
+// Obtém o botão e o parágrafo que exibirá o número de cliques
+var botao = document.getElementById("botao");
+var contadorParagrafo = document.getElementById("contador");
+
+// Inicializa o contador
+var contadorCliques = 0;
+
+// Adiciona um evento de clique ao botão
+botao.addEventListener("click", function() {
+    // Incrementa o contador
+    contadorCliques++;
+
+    // Atualiza o texto do parágrafo com o número de cliques
+    contadorParagrafo.textContent = "Número de Cliques: " + contadorCliques;
+});
+
+</script>
+</html>
